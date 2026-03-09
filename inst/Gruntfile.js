@@ -20,6 +20,14 @@ module.exports = function(grunt) {
                 trace: true
             }
         },
+        copy: {
+            themes: {
+                expand: true,
+                cwd: 'www/styles/themes/',
+                src: ['*.css'],
+                dest: 'www/styles/themes/'
+            }
+        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -79,6 +87,6 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
     // dev
-    grunt.registerTask('default', ['newer:jshint', 'sass', 'bower:dev']);
+    grunt.registerTask('default', ['newer:jshint', 'sass', 'copy:themes', 'bower:dev']);
 
 };

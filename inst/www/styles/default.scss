@@ -102,13 +102,13 @@
   top: 1px;
   right: 4px;
   & button {
-    background-color: $topLevelButtonColor;
+    background-color: var(--rcap-top-level-button-color, $topLevelButtonColor);
     border-radius: 5px;
     font-size: 14pt;
     color: #fff;
   }
   & button:hover {
-    background-color: darken($topLevelButtonColor, 10%);
+    background-color: var(--rcap-top-level-button-color-hover, darken($topLevelButtonColor, 10%));
     text-decoration: none;
   }
 }
@@ -139,35 +139,33 @@
 }
 
 #rcap-message.information {
-  @include background-opacity($attGreen,
-  0.9);
+  background: var(--rcap-functional-green, $attGreen);
   color: white;
 }
 
 #rcap-message.warning {
-  @include background-opacity($attYellow,
-  0.9);
+  background: var(--rcap-functional-yellow, $attYellow);
   color: black;
 }
 
 #rcap-message.error {
-  @include background-opacity($attFunctionalRed,
-  0.9);
+  background: var(--rcap-functional-red, $attFunctionalRed);
   color: white;
 }
 
 #rcap-designer {
-  background: $bg;
-  color: $mainNavColor;
+  background: var(--rcap-bg, $bg);
+  color: var(--rcap-main-nav-color, $mainNavColor);
   font-family: $defaultFont;
   font-size: $defaultFontSize;
   height: 100vh;
   margin-top: -51px; // this is the height of the fixed navbar
+  transition: var(--rcap-theme-transition, none);
   &>.row {
-    background-color: $bgColor;
+    background-color: var(--rcap-bg-color, $bgColor);
   }
   & #top-status-bar {
-    background-color: $mainNavBackgroundColor;
+    background-color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
     height: 50px;
     #current-page-status {
       display: inline-block;
@@ -180,7 +178,7 @@
       -webkit-transition: background-color .25s ease-in-out;
     }
     #current-page-status:hover {
-      background-color: $mainNavCurrentPageHover;
+      background-color: var(--rcap-main-nav-current-page-hover, $mainNavCurrentPageHover);
     }
     #current-page {
       margin-left: 4px;
@@ -195,12 +193,12 @@
     left: 60px;
     height: calc(100% - 50px);
     background-color: rgba(0, 0, 0, 0.97);
-    color: $mainNavColor;
+    color: var(--rcap-main-nav-color, $mainNavColor);
     & h5 {
       clear: left;
       text-transform: uppercase;
       padding-top: 8px;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
     }
     & h5:first-child {
       padding-top: 0;
@@ -210,20 +208,20 @@
         float: left;
         text-align: center;
         margin: 0 5px 5px 0;
-        color: $mainNavColor;
+        color: var(--rcap-main-nav-color, $mainNavColor);
       }
       & a span {
         display: none;
       }
       & a {
-        border: 1px solid $mainNavColor;
-        cursor: move;
-        height: 90px;
-        width: 167px;
-        padding: 19px;
-        color: $mainNavColor;
+            border: 1px solid var(--rcap-main-nav-color, $mainNavColor);
+            cursor: move;
+            height: 90px;
+            width: 167px;
+            padding: 19px;
+        color: var(--rcap-main-nav-color, $mainNavColor);
         &:hover {
-          background-color: $mainNavBackgroundColorHover;
+          background-color: var(--rcap-main-nav-bg-hover, $mainNavBackgroundColorHover);
           transition: background-color .25s ease-in-out;
           -moz-transition: background-color .25s ease-in-out;
           -webkit-transition: background-color .25s ease-in-out;
@@ -247,7 +245,7 @@
       letter-spacing: 2px;
       clear: left;
       margin-top: 10px;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
     }
     & ul {
       list-style-type: none;
@@ -263,7 +261,7 @@
     a:hover,
     a:active {
       display: block;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       font-family: $defaultFont;
       text-decoration: none;
       padding: 10px 0 5px 15px;
@@ -278,7 +276,7 @@
       opacity: 0.5;
       margin-left: 3px;
       display: inline-block;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
     }
     & h4#page-header a:hover,
     h4#datasource-header a:hover,
@@ -293,20 +291,20 @@
       max-height: calc(100% - 25px);
       overflow: auto;
       &::-webkit-scrollbar-track {
-        background-color: $mainNavBackgroundColor;
+        background-color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
       }
       &::-webkit-scrollbar {
         width: 10px;
-        background-color: $mainNavBackgroundColor;
+        background-color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
       }
       &::-webkit-scrollbar-thumb {
-        background-color: lighten($mainNavBackgroundColor, 40%);
+        background-color: var(--rcap-scrollbar-thumb, lighten($mainNavBackgroundColor, 40%));
       }
     }
     & ul.controls a::before,
     & ul.settings a::before {
       text-align: left;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       ;
       padding: 2px 8px 0 0;
       margin: 0;
@@ -341,7 +339,7 @@
     }
     & ul.controls a.control-submitbutton i {
       border-radius: 3px;
-      background-color: $mainNavBackgroundColor;
+      background-color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
       width: 20px;
       margin-right: 6px;
       &::before {
@@ -362,7 +360,7 @@
       }
       & a span::after {
         text-align: right;
-        color: $mainNavColor;
+        color: var(--rcap-main-nav-color, $mainNavColor);
         padding: 2px 3px 0 0;
         margin: 0;
         font: normal normal normal 10px/1 FontAwesome;
@@ -390,7 +388,7 @@
     & span::after {
       display: block;
       text-align: right;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       padding: 2px 3px 0 0;
       margin: 0;
       font: normal normal normal 10px/1 FontAwesome;
@@ -407,7 +405,7 @@
     }
     & #dataSources li,
     & #timers li {
-      border: 1px solid $mainNavColor;
+      border: 1px solid var(--rcap-main-nav-color, $mainNavColor);
       margin-bottom: 5px;
       & i {
         position: absolute;
@@ -444,7 +442,7 @@
     a:hover,
     a:active {
       display: block;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       font-family: $defaultFont;
       text-decoration: none;
       padding: 0;
@@ -488,7 +486,7 @@
         }
         & span::after {
           text-align: right;
-          color: $mainNavColor;
+          color: var(--rcap-main-nav-color, $mainNavColor);
           padding: 2px 3px 0 0;
           margin: 0;
           font: normal normal normal 10px/1 FontAwesome;
@@ -528,8 +526,8 @@
   }
   & #main-menu {
     overflow: auto;
-    background-color: $mainNavBackgroundColor;
-    color: $mainNavColor;
+    background-color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
+    color: var(--rcap-main-nav-color, $mainNavColor);
     position: relative;
     float: left;
     width: 60px;
@@ -626,15 +624,15 @@
     a:hover,
     a:active {
       display: block;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       font-family: $defaultFont;
       text-decoration: none;
     }
     & a:hover {
-      background-color: $mainNavCurrentPageHover;
+      background-color: var(--rcap-main-nav-current-page-hover, $mainNavCurrentPageHover);
     }
     & li.selected>a {
-      background-color: $mainNavCurrentPageHover;
+      background-color: var(--rcap-main-nav-current-page-hover, $mainNavCurrentPageHover);
     }
     & a span::after {
       display: block;
@@ -643,7 +641,7 @@
     & ul.controls a::before,
     & ul.settings a::before {
       text-align: left;
-      color: $mainNavColor;
+      color: var(--rcap-main-nav-color, $mainNavColor);
       padding: 2px 8px 0 0;
       margin: 0;
       font: normal normal normal 10px/1 FontAwesome;
@@ -659,17 +657,17 @@
     }
   }
   & .tab-pane.menu li a {
-    color: $mainNavBackgroundColor;
+    color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
     padding: 5px 0 5px 5px;
     font-size: 15px;
     & i {
-      color: $mainNavBackgroundColor;
+      color: var(--rcap-main-nav-bg, $mainNavBackgroundColor);
       margin-right: 7px;
     }
   }
   & .tab-pane.menu a:hover,
   & .tab-pane.menu li.selected a {
-    background-color: lighten($mainNavBackgroundColor, 80%); //color: lighten($mainNavColor, 40%);
+    background-color: var(--rcap-menu-hover-bg, lighten($mainNavBackgroundColor, 80%)); //color: lighten($mainNavColor, 40%);
   }
   & .stage {
     height: 100%;
@@ -684,7 +682,7 @@
       width: 100%;
     }
     & #inner-stage {
-      border: 1px solid darken($bgColor, 40%);
+      border: 1px solid var(--rcap-border-color, darken($bgColor, 40%));
       position: relative;
       margin: 15px;
       background-color: white;
@@ -1055,7 +1053,7 @@ li.parsley-required:before {
 
 #no-items {
   text-align: center;
-  color: $noItemsColor;
+  color: var(--rcap-no-items-color, $noItemsColor);
   padding: 10px;
   margin: 0;
   font-size: 12pt;
@@ -1081,12 +1079,12 @@ li.parsley-required:before {
 
 .wysiwyg-toolbar,
 .wysiwyg-popuphover {
-  background: $bgColor;
-  color: darken($bgColor, 50%);
+  background: var(--rcap-bg-color, $bgColor);
+  color: var(--rcap-fg, darken($bgColor, 50%));
 }
 
 a.wysiwyg-toolbar-icon {
-  color: darken($bgColor, 50%);
+  color: var(--rcap-fg, darken($bgColor, 50%));
 }
 
 a.wysiwyg-toolbar-icon:hover {

@@ -1,0 +1,76 @@
+/* RCAP High Contrast Theme */
+[data-rcap-theme="high-contrast"] {
+    /* Core colors */
+    --rcap-bg: #000;
+    --rcap-fg: #fff;
+    --rcap-bg-color: #000;
+
+    /* Main navigation */
+    --rcap-main-nav-bg: #000;
+    --rcap-main-nav-bg-hover: #333;
+    --rcap-main-nav-current-page-hover: #1a1a1a;
+    --rcap-main-nav-color: #fff;
+    --rcap-no-items-color: #ccc;
+
+    /* Toolbar */
+    --rcap-toolbar-button-color-hover: #fff;
+    --rcap-toolbar-button-color: #fff;
+
+    /* Messages */
+    --rcap-message-info-color: #00ff00;
+    --rcap-message-warning-color: #ffff00;
+    --rcap-message-error-color: #ff0000;
+
+    /* Top level buttons */
+    --rcap-top-level-button-color: #ffaa00;
+    --rcap-top-level-button-color-hover: #ff8800;
+
+    /* AT&T brand colors (high contrast) */
+    --rcap-att-blue: #00ccff;
+    --rcap-att-light-blue: #66ddff;
+    --rcap-att-dark-blue: #0088cc;
+    --rcap-att-light-gray: #aaa;
+    --rcap-att-gray: #ccc;
+    --rcap-att-dark-gray: #eee;
+    --rcap-att-orange: #ff9900;
+    --rcap-att-yellow: #ffcc00;
+    --rcap-att-green: #00cc00;
+    --rcap-att-dark-green: #00aa44;
+
+    /* Functional colors */
+    --rcap-functional-link-blue: #00ccff;
+    --rcap-functional-text-blue: #fff;
+    --rcap-functional-bg-gray: #111;
+    --rcap-functional-red: #ff3333;
+    --rcap-functional-yellow: #ffcc00;
+    --rcap-functional-green: #00cc00;
+
+    /* Derived colors */
+    --rcap-scrollbar-thumb: #666;
+    --rcap-scrollbar-track: #222;
+    --rcap-menu-hover-bg: #222;
+    --rcap-tab-hover-bg: #222;
+    --rcap-wysiwyg-toolbar-color: #fff;
+    --rcap-stage-border: #fff;
+
+    /* Dialog colors */
+    --rcap-dialog-bg: #111;
+    --rcap-dialog-header-bg: #003366;
+    --rcap-dialog-header-color: #fff;
+    --rcap-dialog-border-color: #fff;
+    --rcap-dialog-footer-color: #fff;
+
+    /* Grid */
+    --rcap-grid-item-border: #fff;
+    --rcap-grid-item-color: #fff;
+    --rcap-configure-btn-bg: #003366;
+
+    /* Content areas */
+    --rcap-content-bg: #000;
+    --rcap-text-color: #fff;
+    --rcap-border-color: #fff;
+    --rcap-link-color: #00ccff;
+
+    /* Theme transition */
+    --rcap-theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

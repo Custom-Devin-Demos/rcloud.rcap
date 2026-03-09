@@ -7,9 +7,9 @@
         width: 605px;
         cursor: n-resize;
         position: relative;
-        border: 1px solid $bgColor;
-        background: $bgColor;
-        color: $fg;
+        border: 1px solid var(--rcap-bg-color, $bgColor);
+        background: var(--rcap-bg-color, $bgColor);
+        color: var(--rcap-fg, $fg);
 
         & .form-item-hint {
             width: 100%;
@@ -111,14 +111,14 @@
 
         overflow: auto;
         &::-webkit-scrollbar-track {
-            background-color: lighten($mainNavBackgroundColor, 75%);
+            background-color: var(--rcap-scrollbar-track, lighten($mainNavBackgroundColor, 75%));
         }
         &::-webkit-scrollbar {
             width: 10px;
-            background-color: lightne($mainNavBackgroundColor, 75%);
+            background-color: var(--rcap-scrollbar-track, lighten($mainNavBackgroundColor, 75%));
         }
         &::-webkit-scrollbar-thumb {
-            background-color: lighten($mainNavBackgroundColor, 55%);
+            background-color: var(--rcap-scrollbar-thumb, lighten($mainNavBackgroundColor, 55%));
         }
 
         & h4 {
@@ -145,7 +145,7 @@
         margin-bottom: 0;
     }
     .nav-tabs > li.active > a {
-        background-color: $bg!important;
+        background-color: var(--rcap-bg, $bg)!important;
     }
     .nav-tabs > li {
         font-size: 14px;
