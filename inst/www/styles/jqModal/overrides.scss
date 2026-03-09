@@ -6,7 +6,7 @@ $borderColor: #cdcdcd;
 	right: 10px!important;
 	top: 10px!important;
 	left: auto!important;
-	background: #f2f2f2;
+	background: var(--rcap-dialog-bg, #f2f2f2);
 
 	& .label {
 		padding-top: 6px;
@@ -21,10 +21,10 @@ $borderColor: #cdcdcd;
 	}
 
 	& .header {
-		border-bottom: 1px solid $borderColor;
+		border-bottom: 1px solid var(--rcap-dialog-border-color, $borderColor);
 		position: relative;
-		background: $attLightBlue;
-		color: white;
+		background: var(--rcap-dialog-header-bg, $attLightBlue);
+		color: var(--rcap-dialog-header-color, white);
 
 		& .top-level-tabs {
 			position: absolute;
@@ -59,7 +59,7 @@ $borderColor: #cdcdcd;
 	}
 
 	& .jqm-footer {
-		border-top: 1px solid $borderColor;
+		border-top: 1px solid var(--rcap-dialog-border-color, $borderColor);
 		display: flex;
 		height: 45px!important;
 	}
@@ -82,8 +82,8 @@ $borderColor: #cdcdcd;
 		transition: color .1s ease-in-out;
 		-moz-transition: color .1s ease-in-out;
 		-webkit-transition: color .1s ease-in-out;
-		color: $jqmColor;
-		border-left: 1px solid $borderColor;
+		color: var(--rcap-fg, $jqmColor);
+		border-left: 1px solid var(--rcap-dialog-border-color, $borderColor);
 	}
 
 	& .jqm-footer a:first-child {

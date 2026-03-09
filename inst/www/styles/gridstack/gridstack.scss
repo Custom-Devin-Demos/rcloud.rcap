@@ -59,7 +59,7 @@
     text-align: center;
     position: absolute;
     text-align: center;
-    background-color: $attBlue;
+    background-color: var(--rcap-att-blue, $attBlue);
     color: white;
     padding: 10px;
     left: 12px;

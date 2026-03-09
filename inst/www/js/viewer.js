@@ -1,6 +1,7 @@
 define(['text!rcap/partials/viewer.htm',
     'rcap/js/ui/gridManager',
     'rcap/js/ui/themeManager',
+    'rcap/js/ui/themeSwitcher',
     'rcap/js/utils/historyManager',
     'pubsub',
     'site/pubSubTable',
@@ -12,7 +13,7 @@ define(['text!rcap/partials/viewer.htm',
     'rcap/js/ui/viewerDialogManager',
     'css!rcap/styles/default.css',
     'css!quill/quill.snow.css'
-], function(mainPartial, GridManager, ThemeManager, HistoryManager, PubSub, pubSubTable, ControlFactory, Serializer, SiteManager, RcapLogger, Request, ViewerDialogManager) {
+], function(mainPartial, GridManager, ThemeManager, ThemeSwitcher, HistoryManager, PubSub, pubSubTable, ControlFactory, Serializer, SiteManager, RcapLogger, Request, ViewerDialogManager) {
 
     'use strict';
 
@@ -20,6 +21,7 @@ define(['text!rcap/partials/viewer.htm',
 
         var me = this;
         var themeManager = new ThemeManager();
+        var themeSwitcher = new ThemeSwitcher();
         var rcapLogger = new RcapLogger();
 
         this.setup = function() {
@@ -41,6 +43,9 @@ define(['text!rcap/partials/viewer.htm',
 
             // theme manager:
             themeManager.initialise();
+
+            // theme switcher:
+            themeSwitcher.initialise();
 
             // show the preloader whilst things are initialised:
             $('#rcap-preloader').show();

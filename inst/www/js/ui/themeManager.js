@@ -3,6 +3,8 @@ define(['pubsub',
 
     'use strict';
 
+    var THEME_STORAGE_KEY = 'rcap.theme.current';
+
     var ThemeManager = function() {
 
         this.initialise = function() {
@@ -23,6 +25,9 @@ define(['pubsub',
                 var settings = site.settings.extract();
 
                 me.applyPackageTheme(settings.siteThemePackage);
+
+                // apply saved custom properties theme:
+                me.applySavedTheme();
             });
 
         };
@@ -81,6 +86,33 @@ define(['pubsub',
             } else {
                 this.applyLink(undefined, 'package');
             }
+        };
+
+        this.applyCustomPropertiesTheme = function(themeId) {
+            if (!themeId || themeId === 'default') {
+                document.documentElement.removeAttribute('data-rcap-theme');
+            } else {
+                document.documentElement.setAttribute('data-rcap-theme', themeId);
+            }
+        };
+
+        this.applySavedTheme = function() {
+            var savedTheme;
+            try {
+                savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'default';
+            } catch (e) {
+                savedTheme = 'default';
+            }
+            this.applyCustomPropertiesTheme(savedTheme);
+        };
+
+        this.switchTheme = function(themeId) {
+            try {
+                localStorage.setItem(THEME_STORAGE_KEY, themeId);
+            } catch (e) {
+                // localStorage unavailable
+            }
+            this.applyCustomPropertiesTheme(themeId);
         };
 
     };

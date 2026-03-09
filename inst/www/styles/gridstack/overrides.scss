@@ -106,7 +106,7 @@
         -webkit-transition: -webkit-transform .5s ease-in-out;
         transition: transform .5s ease-in-out;
         outline: none;
-        background: $attLightBlue;
+        background: var(--rcap-att-light-blue, $attLightBlue);
 
         & i {
             font-size: 22px;

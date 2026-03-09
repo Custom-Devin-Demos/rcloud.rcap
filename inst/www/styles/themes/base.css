@@ -1,0 +1,82 @@
+/* RCAP Base Theme - CSS Custom Properties */
+:root {
+    /* Core colors */
+    --rcap-bg: #fff;
+    --rcap-fg: rgb(62, 62, 62);
+    --rcap-bg-color: #F2F2F2;
+
+    /* Main navigation */
+    --rcap-main-nav-bg: #222;
+    --rcap-main-nav-bg-hover: #2e2e2e;
+    --rcap-main-nav-current-page-hover: #070707;
+    --rcap-main-nav-color: #efefef;
+    --rcap-no-items-color: #555;
+
+    /* Toolbar */
+    --rcap-toolbar-button-color-hover: #fff;
+    --rcap-toolbar-button-color: #d9d9d9;
+
+    /* Messages */
+    --rcap-message-info-color: #3c763d;
+    --rcap-message-warning-color: #ddc033;
+    --rcap-message-error-color: #a94442;
+
+    /* Top level buttons */
+    --rcap-top-level-button-color: #c37e00;
+    --rcap-top-level-button-color-hover: #a56a00;
+
+    /* AT&T brand colors */
+    --rcap-att-blue: #009fdb;
+    --rcap-att-black: #000000;
+    --rcap-att-white: #ffffff;
+    --rcap-att-orange: #ea7400;
+    --rcap-att-light-blue: #71c5e8;
+    --rcap-att-dark-blue: #0568ae;
+    --rcap-att-light-gray: #d2d2d2;
+    --rcap-att-gray: #959595;
+    --rcap-att-dark-gray: #5a5a5a;
+    --rcap-att-yellow: #ffb81c;
+    --rcap-att-light-green: #b5bd00;
+    --rcap-att-green: #4ca90c;
+    --rcap-att-dark-green: #007a3e;
+    --rcap-att-light-purple: #caa2dd;
+    --rcap-att-purple: #9063cd;
+    --rcap-att-dark-purple: #702f8a;
+
+    /* Functional colors */
+    --rcap-functional-link-blue: #0568ae;
+    --rcap-functional-text-blue: #191919;
+    --rcap-functional-bg-gray: #f2f2f2;
+    --rcap-functional-red: #cf2a2a;
+    --rcap-functional-yellow: #ffb81c;
+    --rcap-functional-green: #007a3e;
+
+    /* Derived colors (precomputed from SCSS lighten/darken) */
+    --rcap-scrollbar-thumb: #8e8e8e;
+    --rcap-scrollbar-track: #e2e2e2;
+    --rcap-menu-hover-bg: #f0f0f0;
+    --rcap-tab-hover-bg: #f5f5f5;
+    --rcap-wysiwyg-toolbar-color: #717171;
+    --rcap-stage-border: #888;
+
+    /* Dialog colors */
+    --rcap-dialog-bg: #f2f2f2;
+    --rcap-dialog-header-bg: #71c5e8;
+    --rcap-dialog-header-color: white;
+    --rcap-dialog-border-color: #cdcdcd;
+    --rcap-dialog-footer-color: #3e3e3e;
+
+    /* Grid */
+    --rcap-grid-item-border: #888;
+    --rcap-grid-item-color: #2c3e50;
+    --rcap-configure-btn-bg: #71c5e8;
+
+    /* Content areas */
+    --rcap-content-bg: white;
+    --rcap-text-color: #222;
+    --rcap-border-color: #ccc;
+    --rcap-link-color: #369;
+
+    /* Theme transition */
+    --rcap-theme-transition: none;
+}

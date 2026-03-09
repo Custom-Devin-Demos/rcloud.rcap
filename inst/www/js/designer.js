@@ -8,6 +8,7 @@ define([
     'rcap/js/ui/dirtyStateIndicator',
     'rcap/js/ui/gridManager',
     'rcap/js/ui/themeManager',
+    'rcap/js/ui/themeSwitcher',
     'rcap/js/assetManager',
     'rcap/js/profileManager',
     'site/siteManager',
@@ -17,13 +18,14 @@ define([
     'css!rcap/styles/default.css',
     'css!quill/quill.snow.css'
 ], function(rcloud, Serializer, MenuManager, InfoBarManager, DialogManager, MessageManager, DirtyStateIndicator, GridManager,
-    ThemeManager, AssetManager, ProfileManager, SiteManager, PubSub, pubSubTable, mainPartial) {
+    ThemeManager, ThemeSwitcher, AssetManager, ProfileManager, SiteManager, PubSub, pubSubTable, mainPartial) {
 
     'use strict';
 
     var rcloudSelector = '.container, #rcloud-navbar-main, #rcloud-navbar-main, .navbar-fixed-top';
     var rcapSelector = '#rcap-designer';
     var themeManager = new ThemeManager();
+    var themeSwitcher = new ThemeSwitcher();
 
     var closeDesigner = function() {
         $('body').removeClass('rcap-designer');
@@ -61,6 +63,9 @@ define([
 
         // theme manager:
         themeManager.initialise();
+
+        // theme switcher:
+        themeSwitcher.initialise();
 
         // site manager:
         new SiteManager().initialise();

@@ -93,6 +93,8 @@ define(['pubsub', 'rcap/js/Class'], function() {
         editTheme: 'editTheme',
         showThemeEditorDialog: 'showThemeEditorDialog',
         updateSiteThemePackage: 'updateSiteThemePackage',
+        showThemeSwitcherDialog: 'showThemeSwitcherDialog',
+        themeChanged: 'themeChanged',
 
         // profile management:
         configureProfile: 'configureProfile',
