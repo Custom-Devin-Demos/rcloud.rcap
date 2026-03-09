@@ -30,10 +30,6 @@ define(['pubsub',
                 me.applySavedTheme();
             });
 
-            PubSub.subscribe(pubSubTable.themeChanged, function(msg, themeId) {
-                me.applyCustomPropertiesTheme(themeId);
-            });
-
         };
 
         this.cleanUp = function() {
@@ -117,7 +113,6 @@ define(['pubsub',
                 // localStorage unavailable
             }
             this.applyCustomPropertiesTheme(themeId);
-            PubSub.publish(pubSubTable.themeChanged, themeId);
         };
 
     };
